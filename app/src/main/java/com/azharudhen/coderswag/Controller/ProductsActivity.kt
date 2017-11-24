@@ -15,4 +15,3 @@ class ProductsActivity : AppCompatActivity() {
         println(categoryType)
     }
 }
-    

@@ -32,18 +32,28 @@ object DataService {
     )
 
     val hoodies = listOf(
-            Product("Devslopes Hoodie Gray", "$28","hoodie01"),
-            Product("Devslopes Hoodie Red", "$32","hoodie02"),
-            Product("Devslopes Gray Hoodie", "$28","hoodie03"),
-            Product("Devslopes Black Hoodie", "$32","hoodie04")
+            Product("Devslopes Hoodie Gray", "$28","hoodie1"),
+            Product("Devslopes Hoodie Red", "$32","hoodie2"),
+            Product("Devslopes Gray Hoodie", "$28","hoodie3"),
+            Product("Devslopes Black Hoodie", "$32","hoodie4")
     )
 
     val shirts = listOf(
-            Product("Devslopes Shirt Black", "$18","shirt01"),
-            Product("Devslopes Badge Light Gray", "$20","shirt02"),
-            Product("Devslopes Logo Shirt Red", "$22","shirt03"),
-            Product("Devslopes Hustle", "$22","shirt04"),
-            Product("Kicklip Studios", "$18","shirt05")
+            Product("Devslopes Shirt Black", "$18","shirt1"),
+            Product("Devslopes Badge Light Gray", "$20","shirt2"),
+            Product("Devslopes Logo Shirt Red", "$22","shirt3"),
+            Product("Devslopes Hustle", "$22","shirt4"),
+            Product("Kicklip Studios", "$18","shirt5")
     )
 
+    val digitalGood = listOf<Product>()
+
+    fun getProducts(category: String) : List<Product>{
+        when (category) {
+            "SHIRTS" -> return shirts
+            "HATS" -> return  hats
+            "HOODIES" -> return hoodies
+            else -> return digitalGood
+        }
+    }
 }
